@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/about.css";
 import Logo from "../assets/logo.jpg";
+import { IoMdCall } from "react-icons/io";
 
 const About: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const About: React.FC = () => {
           <p className="text-gray-700 leading-relaxed mb-6 text-base md:text-lg font-light">
             Ne jemi një ekip profesionistësh me përvojë shumëvjeçare në{" "}
             <span className="font-semibold text-[#f5c47f]">
-              shtrimin e pllakave qeramike, sanitari dhe instalime ujësjellësi.
+              shtrimin e pllakave qeramike, sanitari  instalime ujësjellësi dhe kanalizime & riparime.
             </span>{" "}
             Çdo punë kryhet me përkushtim për të ofruar dizajn modern dhe cilësi
             afatgjatë.
@@ -33,9 +34,10 @@ const About: React.FC = () => {
 
           <a
             href="#contact"
-            className="inline-block bg-[#d4af7f] hover:bg-[#e6c58c] text-[#0f172a] font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center bg-[#d4af7f] hover:bg-[#e6c58c] text-[#0f172a] font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            Kërko Ofertë Falas
+            <IoMdCall size={25} className="mr-3" />
+            Thirr Tani
           </a>
         </div>
 
