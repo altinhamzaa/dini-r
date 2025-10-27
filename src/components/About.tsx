@@ -1,43 +1,46 @@
 import React from "react";
 import "../styles/about.css";
-import Logo from "../assets/logo.jpg"
+import Logo from "../assets/logo.jpg";
 
 const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="about-section bg-gray-50 py-16 px-6 md:px-10 lg:px-20"
+      className="about-section bg-white py-20 px-6 md:px-10 lg:px-24 text-[#0f172a]"
     >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         <div className="flex-1 text-center lg:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-5 text-[#d4af7f]">
             Rreth Nesh
           </h2>
 
-          <p className="text-gray-600 leading-relaxed mb-6 text-base md:text-lg">
-            Ne jemi një ekip profesionistësh me përvojë të gjatë në
-            <span className="font-semibold text-gray-800"> shtrimin e pllakave qeramike, graniti dhe mermeri</span>.
-            Punojmë me përkushtim për të ofruar dizajne moderne dhe punime të
-            pastra që i japin çdo ambienti një pamje të sofistikuar.
+          <div className="w-20 h-1 bg-[#d4af7f] mx-auto lg:mx-0 rounded-full mb-8"></div>
+
+          <p className="text-gray-700 leading-relaxed mb-6 text-base md:text-lg font-light">
+            Ne jemi një ekip profesionistësh me përvojë shumëvjeçare në{" "}
+            <span className="font-semibold text-[#f5c47f]">
+              shtrimin e pllakave qeramike, sanitari dhe instalime ujësjellësi.
+            </span>{" "}
+            Çdo punë kryhet me përkushtim për të ofruar dizajn modern dhe cilësi
+            afatgjatë.
           </p>
 
-          <p className="text-gray-600 leading-relaxed mb-6 text-base md:text-lg">
-            Me mbi 10 vite eksperiencë në sektorin e ndërtimit dhe dekorimit,
-            garantojmë cilësi të lartë, precizitet dhe kënaqësi maksimale për
-            klientët tanë. Ne kujdesemi për çdo detaj — nga planifikimi deri në
-            përfundimin e projektit.
+          <p className="text-gray-700 leading-relaxed mb-8 text-base md:text-lg font-light">
+            Puna jonë karakterizohet nga preciziteti, korrektësia dhe respekti
+            ndaj çdo projekti. Ne garantojmë rezultate që rrisin vlerën dhe
+            estetikën e çdo ambienti.
           </p>
 
           <a
             href="#contact"
-            className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-md"
+            className="inline-block bg-[#d4af7f] hover:bg-[#e6c58c] text-[#0f172a] font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Kërko Ofertë Falas
           </a>
         </div>
 
         <div className="flex-1">
-          <div className="about-image-wrapper shadow-xl rounded-2xl overflow-hidden">
+          <div className="about-image-wrapper rounded-2xl overflow-hidden shadow-2xl border border-[#d4af7f]/30">
             <img
               src={Logo}
               alt="Punime me pllaka qeramike"

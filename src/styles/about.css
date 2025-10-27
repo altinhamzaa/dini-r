@@ -1,5 +1,6 @@
 .about-section {
-  scroll-margin-top: 80px; 
+  scroll-margin-top: 80px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .about-image-wrapper img {
@@ -8,5 +9,5 @@
 
 .about-image-wrapper:hover img {
   transform: scale(1.05);
-  filter: brightness(1.05);
+  filter: brightness(1.15);
 }
