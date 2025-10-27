@@ -1,0 +1,11 @@
+.services-section {
+  scroll-margin-top: 80px; 
+}
+
+.service-card {
+  @apply bg-white p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.icon-box {
+  @apply bg-[#ff6b35] w-16 h-16 flex items-center justify-center rounded-xl mb-5 shadow-md;
+}
