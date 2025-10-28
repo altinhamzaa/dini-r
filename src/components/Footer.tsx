@@ -11,12 +11,9 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 mb-8">
           
-          <div className="flex flex-col justify-between border-b md:border-b-0 md:border-r border-gray-700 md:pr-8 pb-6 md:pb-0">
-            <div>
-              <h3 className="text-2xl font-bold text-[#f5c47f] mb-3">Dini-R Qeramikë</h3>
-            </div>
-
-            <div className="flex space-x-4 mt-6">
+          <div className="flex flex-col justify-start border-b md:border-b-0 md:border-r border-gray-700 md:pr-8 pb-6 md:pb-0">
+            <h4 className="text-lg font-semibold mb-4 border-b-2 border-[#f5c47f] pb-2 inline-block">Dini-R Qeramikë</h4>
+            <div className="flex space-x-4 mt-0"> 
               <a href="https://instagram.com/profili_i_juaj" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
                 <FaInstagram size={22} className="text-white" />
               </a>
@@ -29,7 +26,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div className="flex flex-col border-b md:border-b-0 md:border-r border-gray-700 md:px-8 pb-6 md:pb-0">
             <h4 className="text-lg font-semibold mb-4 border-b-2 border-[#f5c47f] pb-2 inline-block">Lidhje të Shpejta</h4>
             <ul className="space-y-2">
