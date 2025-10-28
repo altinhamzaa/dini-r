@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const linkClass =
     "transition-colors duration-200 hover:text-[#d4af7f] font-medium text-gray-200";
   const activeClass = "text-[#d4af7f] font-semibold";
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-[#050e24] shadow-md">
@@ -20,56 +31,16 @@ const Navbar: React.FC = () => {
         </NavLink>
 
         <ul className="hidden md:flex space-x-8 items-center">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? activeClass : linkClass
-              }
-            >
-              Ballina
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? activeClass : linkClass
-              }
-            >
-              Rreth Nesh
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                isActive ? activeClass : linkClass
-              }
-            >
-              Shërbimet
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/gallery"
-              className={({ isActive }) =>
-                isActive ? activeClass : linkClass
-              }
-            >
-              Galeria
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive ? activeClass : linkClass
-              }
-            >
-              Kontakti
-            </NavLink>
-          </li>
+          {["/", "/about", "/services", "/gallery", "/contact"].map((path, idx) => {
+            const name = ["Ballina", "Rreth Nesh", "Shërbimet", "Galeria", "Kontakti"][idx];
+            return (
+              <li key={path}>
+                <NavLink to={path} className={({ isActive }) => isActive ? activeClass : linkClass}>
+                  {name}
+                </NavLink>
+              </li>
+            );
+          })}
         </ul>
 
         <button
@@ -80,67 +51,29 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden bg-[#050e24] shadow-lg">
-          <ul className="flex flex-col items-center space-y-4 py-6 text-lg font-medium text-gray-200">
-            <li>
-              <NavLink
-                to="/"
-                onClick={() => setIsOpen(false)}
-                className={({ isActive }) =>
-                  isActive ? activeClass : linkClass
-                }
-              >
-                Ballina
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                onClick={() => setIsOpen(false)}
-                className={({ isActive }) =>
-                  isActive ? activeClass : linkClass
-                }
-              >
-                Rreth Nesh
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/services"
-                onClick={() => setIsOpen(false)}
-                className={({ isActive }) =>
-                  isActive ? activeClass : linkClass
-                }
-              >
-                Shërbimet
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/gallery"
-                onClick={() => setIsOpen(false)}
-                className={({ isActive }) =>
-                  isActive ? activeClass : linkClass
-                }
-              >
-                Galeria
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                onClick={() => setIsOpen(false)}
-                className={({ isActive }) =>
-                  isActive ? activeClass : linkClass
-                }
-              >
-                Kontakti
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      )}
+      <div
+        ref={menuRef}
+        className={`md:hidden bg-[#050e24] overflow-hidden transition-all duration-300 ${
+          isOpen ? "max-h-96 py-6" : "max-h-0"
+        }`}
+      >
+        <ul className="flex flex-col items-center space-y-4 text-lg font-medium text-gray-200">
+          {["/", "/about", "/services", "/gallery", "/contact"].map((path, idx) => {
+            const name = ["Ballina", "Rreth Nesh", "Shërbimet", "Galeria", "Kontakti"][idx];
+            return (
+              <li key={path}>
+                <NavLink
+                  to={path}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) => isActive ? activeClass : linkClass}
+                >
+                  {name}
+                </NavLink>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 };
