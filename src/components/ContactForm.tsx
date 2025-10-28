@@ -33,11 +33,10 @@ function ContactForm() {
         </div>
          <div className="icone flex space-x-5">
               
-          <a href="https:/viber.com/profili_i_juaj" className="bg-[#f5c47f] hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
-          
+          <a href="https:/viber.com/profili_i_juaj" className="bg-gray-700 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
           <SiViber size={22} />
           </a>
-          <a href="https:/Whatsapp.com"className="bg-[#f5c47f] hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+          <a href="https:/Whatsapp.com"className="bg-[#f5c47f] hover:bggray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
           <FaWhatsapp size={22}/>
           </a>
          </div>
