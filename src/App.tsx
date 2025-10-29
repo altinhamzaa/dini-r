@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import ScrollToTop from "./components/ScrollToTop";
 import Gallery from "./components/Gallery";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<ContactForm />} />
         </Routes>
       </div>
       <Footer />
