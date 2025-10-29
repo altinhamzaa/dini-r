@@ -1,5 +1,6 @@
 import React from "react";
 import { Wrench, Droplets, ShowerHead, Ruler } from "lucide-react";
+import ScrollToTopWithButton from "./ScrollToTopWithButton";
 
 const Services: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ const Services: React.FC = () => {
       id="services"
       className="min-h-screen py-20 px-6 sm:px-12 lg:px-24 bg-gray-100 text-[#0f172a] flex flex-col justify-center"
     >
+      <ScrollToTopWithButton />
       <div className="max-w-3xl mx-auto text-center mb-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mt-6 mb-4 text-[#d4af7f]">
           Shërbime tona profesionale:

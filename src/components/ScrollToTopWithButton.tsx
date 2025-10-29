@@ -12,8 +12,7 @@ const ScrollToTopWithButton: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) setVisible(true);
-      else setVisible(false);
+      setVisible(window.scrollY > 300);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -28,7 +27,17 @@ const ScrollToTopWithButton: React.FC = () => {
       {visible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-transparent border border-white text-white p-3 rounded-full shadow-lg hover:bg-white hover:text-black hover:shadow-xl transition-all z-50"
+          className="
+            fixed bottom-6 right-6 
+            bg-black/60 text-white 
+            p-3 rounded-full 
+            shadow-lg 
+            hover:bg-[#d4af7f] hover:text-black hover:shadow-xl 
+            transition-all 
+            z-50
+            flex items-center justify-center
+          "
+          title="Scroll to top"
         >
           <FaArrowUp size={20} />
         </button>

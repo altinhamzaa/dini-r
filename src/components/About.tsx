@@ -1,6 +1,7 @@
 import React from "react";
 import { IoMdCall } from "react-icons/io";
 import Logo from "../assets/logo.jpg";
+import ScrollToTopWithButton from "./ScrollToTopWithButton";
 
 const About: React.FC = () => {
   return (
@@ -8,6 +9,7 @@ const About: React.FC = () => {
       id="about"
       className="min-h-screen flex items-center justify-center bg-gray-100 text-[#0f172a] px-6 sm:px-8 md:px-12 lg:px-24 py-12"
     >
+      <ScrollToTopWithButton />
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 mt-10 lg:mt-0">
         <div className="flex-1 text-center lg:text-left">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-[#d4af7f]">
