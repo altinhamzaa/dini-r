@@ -79,9 +79,10 @@ const Gallery: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto text-center mb-10">
-        <h2 className="text-2xl sm:text-3xl md:text-3xl font-extrabold tracking-tight mb-4 mt-10 text-[#d4af7f]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-4 mt-12 text-[#f5c47f]">
           Galeria e Punimeve
         </h2>
+          <div className="w-24 h-1 bg-[#f5c47f] mx-auto mb-6 rounded-full"></div>
         <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
           Shikoni disa nga punimet tona profesionale në ndërtim, instalime dhe
           riparime.

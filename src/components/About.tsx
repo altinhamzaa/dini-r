@@ -32,7 +32,7 @@ const About: React.FC = () => {
 
           <div className="flex justify-center lg:justify-start">
             <a
-              href="tel:+38344123123"
+              href="tel:+38349430005"
               className="inline-flex items-center justify-center gap-3 bg-[#d4af7f] hover:bg-[#e6c58c] text-[#0f172a] font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               <IoMdCall size={26} />
