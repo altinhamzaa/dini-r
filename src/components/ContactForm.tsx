@@ -1,5 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa6";
 import { SiViber } from "react-icons/si";
+import {Input} from 'antd';
+import { IoMdCall } from "react-icons/io";
 
 function ContactForm() {
     return(
@@ -32,11 +34,13 @@ function ContactForm() {
           <span>Rr. Dritan Hoxha, Tiranë</span>
         </div>
          <div className="icone flex space-x-5">
-              
-          <a href="https:/viber.com/profili_i_juaj" className="bg-gray-700 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+             <a href="https://viber.com/profili_i_juaj" className="bg-gray-700 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+          <IoMdCall size={22} />
+          </a>
+          <a href="https://viber.com/profili_i_juaj" className="bg-gray-700 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
           <SiViber size={22} />
           </a>
-          <a href="https:/Whatsapp.com"className="bg-[#f5c47f] hover:bggray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+          <a href="https://whatsapp.com/profili_i_juaj"className="bg-[#f5c47f] hover:bggray-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
           <FaWhatsapp size={22}/>
           </a>
          </div>
@@ -45,7 +49,7 @@ function ContactForm() {
     <form className="bg-white shadow-lg rounded-lg p-8 space-y-5">
       <div>
         <label className="block text-sm font-medium text-gray-700">Emri</label>
-        <input
+         <Input
           type="text"
           placeholder="Shkruani emrin tuaj"
           className="w-full mt-1 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#f5c47f]"
@@ -54,7 +58,7 @@ function ContactForm() {
 
       <div>
         <label className="block text-sm font-medium text-gray-700">Email</label>
-        <input
+        <Input
           type="email"
           placeholder="Shkruani email-in tuaj"
           className="w-full mt-1 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#f5c47f]"
@@ -63,11 +67,11 @@ function ContactForm() {
 
       <div>
         <label className="block text-sm font-medium text-gray-700">Mesazhi</label>
-        <textarea
-          
+        <Input.TextArea
+          rows={4}
           placeholder="Shkruani mesazhin tuaj"
-          className="w-full mt-1 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-b[#f5c47f]"
-        ></textarea>
+          className="w-full mt-1 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#f5c47f]"
+        />
       </div>
       <button
         type="submit"
