@@ -14,13 +14,13 @@ const Footer: React.FC = () => {
           <div className="flex flex-col justify-start border-b md:border-b-0 md:border-r border-gray-700 md:pr-8 pb-6 md:pb-0">
             <h4 className="text-lg font-semibold mb-4 border-b-2 border-[#f5c47f] pb-2 inline-block ">Dini-R Qeramikë</h4>
             <div className="flex space-x-4 mt-0"> 
-              <a href="https://instagram.com/profili_i_juaj" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+              <a href="https://www.instagram.com/elmedinrexhaaa/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
                 <FaInstagram size={22} className="text-white" />
               </a>
-              <a href="https://facebook.com/profili_i_juaj" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+              <a href="https://www.facebook.com/elmedinirexha" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
                 <FaFacebook size={22} className="text-white" />
               </a>
-              <a href="https://tiktok.com/profili_i_juaj" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+              <a href="https://www.tiktok.com/@diniqeramik" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
                 <FaTiktok size={22} className="text-white" />
               </a>
             </div>
@@ -56,11 +56,11 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <FaPhone className="text-[#f5c47f] mr-3" />
-                <a href="tel:+38344123123" className="hover:text-[#f5c47f] transition duration-300">+383 44 123 123</a>
+                <a href="tel:+383 49 430 005" className="hover:text-[#f5c47f] transition duration-300">+383 49 430 005</a>
               </div>
               <div className="flex items-center">
                 <FaEnvelope className="text-[#f5c47f] mr-3" />
-                <a href="mailto:info@pllaka-premium.com" className="hover:text-[#f5c47f] transition duration-300">info@pllaka-premium.com</a>
+                <a href="mailto:info@pllaka-premium.com" className="hover:text-[#f5c47f] transition duration-300">info@dini-r-qeramikë.com</a>
               </div>
               <div className="flex items-start">
                 <FaClock className="text-[#f5c47f] mr-3 mt-1" />
