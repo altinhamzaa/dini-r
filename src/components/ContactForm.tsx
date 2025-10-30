@@ -9,12 +9,12 @@ const ContactForm: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative bg-[#0f172a] py-42 px-6 sm:px-10 lg:px-20 text-white overflow-hidden"
+      className="relative bg-[#0f172a] py-10 lg:py-42 px-6 sm:px-10 lg:px-20 text-white overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(245,196,127,0.15),transparent_70%)]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start">
-        <div className="mt-6 lg:mt-10">
+        <div className=" mt-18 lg:mt-10">
           <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-[#f5c47f]">
             Na Kontaktoni
           </h2>
@@ -56,7 +56,6 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
 
-          {/* SOCIAL ICONS */}
           <div className="flex space-x-6 pt-6">
             {[
               {
@@ -86,42 +85,42 @@ const ContactForm: React.FC = () => {
         </div>
 
         <form
-          className="bg-white rounded-3xl shadow-2xl p-10 sm:p-12 space-y-8 border border-[#f5c47f]/20 mt-10 lg:mt-0"
+          className="bg-white rounded-3xl shadow-2xl p-10 sm:p-12 space-y-8 border border-[#f5c47f]/20 5 lg:mt-0 w-full"
           onSubmit={(e) => e.preventDefault()}
         >
           <h3 className="text-2xl font-semibold text-[#0f172a] mb-6">
             Dërgoni Mesazhin Tuaj
           </h3>
 
-          <div>
+          <div className="w-full">
             <label className="block text-sm font-medium text-[#0f172a] mb-2">
               Emri
             </label>
             <Input
               placeholder="Shkruani emrin tuaj"
-              className="border-gray-300 rounded-md py-3 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f]"
+              className="border-gray-300 rounded-md py-3 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full"
             />
           </div>
 
-          <div>
+          <div className="w-full">
             <label className="block text-sm font-medium text-[#0f172a] mb-2">
               Email
             </label>
             <Input
               type="email"
               placeholder="Shkruani email-in tuaj"
-              className="border-gray-300 rounded-md py-3 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f]"
+              className="border-gray-300 rounded-md py-3 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full"
             />
           </div>
 
-          <div>
+          <div className="w-full">
             <label className="block text-sm font-medium text-[#0f172a] mb-2">
               Mesazhi
             </label>
             <Input.TextArea
               rows={5}
               placeholder="Shkruani mesazhin tuaj"
-              className="border-gray-300 rounded-md py-3 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f]"
+              className="border-gray-300 rounded-md py-3 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full"
             />
           </div>
 
