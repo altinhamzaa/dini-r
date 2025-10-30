@@ -136,6 +136,7 @@ const ContactForm: React.FC = () => {
           </button>
         </form>
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-[#f5c47f] via-[#ffd899] to-transparent"></div>
     </section>
   );
 };

@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
           </NavLink>
         </div>
       </div>
-
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-[#f5c47f] via-[#ffd899] to-transparent"></div>
       <div className="absolute bottom-6 flex flex-col items-center text-white opacity-80 animate-bounce">
         <span className="text-sm sm:text-base mb-1 font-light">Rrëshqit poshtë</span>
         <div className="w-5 h-10 border-2 border-white rounded-full flex justify-center">
