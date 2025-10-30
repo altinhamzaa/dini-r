@@ -37,7 +37,7 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <section className="relative py-24 px-6 sm:px-10 lg:px-20 bg-[#0f172a] text-white overflow-hidden">
+    <section className="relative py-21 px-6 sm:px-10 lg:px-20 bg-[#0f172a] text-white overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,196,127,0.1),transparent_70%)]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">

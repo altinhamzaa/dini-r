@@ -27,7 +27,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[#0f172a] text-white py-24 px-6 sm:px-12 lg:px-24"
+      className="relative overflow-hidden bg-[#0f172a] text-white py-27 px-6 sm:px-12 lg:px-24"
     >
       <ScrollToTopWithButton />
 
