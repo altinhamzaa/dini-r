@@ -85,48 +85,48 @@ const ContactForm: React.FC = () => {
         </div>
 
         <form
-          className="bg-white rounded-3xl shadow-2xl p-10 sm:p-12 space-y-8 border border-[#f5c47f]/20 5 lg:mt-0 w-full"
+          className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 space-y-6 border border-[#f5c47f]/20 w-full"
           onSubmit={(e) => e.preventDefault()}
         >
-          <h3 className="text-2xl font-semibold text-[#0f172a] mb-6">
+          <h3 className="text-xl sm:text-2xl font-semibold text-[#0f172a] mb-4">
             Dërgoni Mesazhin Tuaj
           </h3>
 
           <div className="w-full">
-            <label className="block text-sm font-medium text-[#0f172a] mb-2">
+            <label className="block text-sm font-medium text-[#0f172a] mb-1">
               Emri
             </label>
             <Input
               placeholder="Shkruani emrin tuaj"
-              className="border-gray-300 rounded-md py-3 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full"
+              className="border-gray-300 rounded-md py-2 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full"
             />
           </div>
 
           <div className="w-full">
-            <label className="block text-sm font-medium text-[#0f172a] mb-2">
+            <label className="block text-sm font-medium text-[#0f172a] mb-1">
               Email
             </label>
             <Input
               type="email"
               placeholder="Shkruani email-in tuaj"
-              className="border-gray-300 rounded-md py-3 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full"
+              className="border-gray-300 rounded-md py-2 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full"
             />
           </div>
 
           <div className="w-full">
-            <label className="block text-sm font-medium text-[#0f172a] mb-2">
+            <label className="block text-sm font-medium text-[#0f172a] mb-1">
               Mesazhi
             </label>
             <Input.TextArea
-              rows={5}
+              rows={4}
               placeholder="Shkruani mesazhin tuaj"
-              className="border-gray-300 rounded-md py-3 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full"
+              className="border-gray-300 rounded-md py-2 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full resize-none"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-[#f5c47f] text-[#0f172a] py-4 rounded-md font-semibold shadow-lg hover:bg-[#ffd899] transition duration-300 mt-4"
+            className="w-full bg-[#f5c47f] text-[#0f172a] py-3 rounded-md font-semibold shadow-md hover:bg-[#ffd899] transition duration-300"
           >
             Dërgo Mesazhin
           </button>
