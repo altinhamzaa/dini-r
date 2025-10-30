@@ -6,33 +6,37 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen flex flex-col justify-center items-center text-center bg-cover bg-center bg-no-repeat font-[Poppins]"
+      className="relative h-screen flex flex-col justify-center items-center text-center font-[Poppins] overflow-hidden"
       style={{
         backgroundImage: `url(${Background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[#0f172a]/80 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(245,196,127,0.1),transparent_70%)]"></div>
 
-      <div className="relative z-10 px-6 sm:px-10 text-white">
+      <div className="relative z-10 px-6 sm:px-10 text-white max-w-3xl">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg opacity-0 animate-slideInLeft">
-          <span className="text-[#d4af7f]">Dini-R</span>{" "}
+          <span className="text-[#f5c47f]">Dini-R</span>{" "}
           <span className="text-white font-semibold">Qeramikë</span>
         </h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl max-w-2xl mx-auto text-gray-200 mb-10 leading-relaxed font-light opacity-0 animate-slideInRight">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-300 mb-10 leading-relaxed font-light opacity-0 animate-slideInRight">
           Ekspertë në shtrimin e pllakave, ofrojmë cilësi dhe saktësi në çdo projekt.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0 animate-fadeIn delay-500">
           <NavLink
             to="/services"
-            className="cursor-pointer bg-[#d4af7f] hover:bg-[#e6c58c] text-[#0f172a] font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="cursor-pointer bg-[#f5c47f] hover:bg-[#ffd899] text-[#0f172a] font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
           >
             Shiko Shërbimet
           </NavLink>
           <NavLink
             to="/contact"
-            className="cursor-pointer bg-transparent border-2 border-[#d4af7f] hover:bg-[#d4af7f] hover:text-[#0f172a] text-white font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-lg shadow-md transition-all duration-300"
+            className="cursor-pointer bg-transparent border-2 border-[#f5c47f] hover:bg-[#f5c47f] hover:text-[#0f172a] text-white font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
           >
             Kontakto Tani
           </NavLink>

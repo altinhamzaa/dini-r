@@ -1,70 +1,100 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdCall } from "react-icons/io";
 import Logo from "../assets/logo.jpg";
 import ScrollToTopWithButton from "./ScrollToTopWithButton";
 
 const About: React.FC = () => {
+  const [years, setYears] = useState(0);
+  const [projects, setProjects] = useState(0);
+  const [clients, setClients] = useState(0);
+
+  useEffect(() => {
+    const targets = { years: 7, projects: 315, clients: 400 };
+    const duration = 2000;
+    const start = performance.now();
+
+    const animate = (time: number) => {
+      const progress = Math.min((time - start) / duration, 1);
+      setYears(Math.floor(progress * targets.years));
+      setProjects(Math.floor(progress * targets.projects));
+      setClients(Math.floor(progress * targets.clients));
+      if (progress < 1) requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
+  }, []);
+
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center bg-gray-100 text-[#0f172a] px-6 sm:px-8 md:px-12 lg:px-24 py-12"
+      className="relative overflow-hidden bg-[#0f172a] text-white py-24 px-6 sm:px-12 lg:px-24"
     >
       <ScrollToTopWithButton />
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 mt-10 lg:mt-0">
-        <div className="flex-1 text-center lg:text-left">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-[#d4af7f]">
-            Rreth Nesh
-          </h2>
 
-          <div className="w-24 h-1 bg-[#d4af7f] mx-auto lg:mx-0 rounded-full shadow-sm mb-6"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,196,127,0.15),transparent_60%)]"></div>
 
-          <p className="text-gray-800 leading-relaxed mb-5 text-base sm:text-lg font-light">
-            Ne jemi një ekip profesionistësh me përvojë shumëvjeçare në{" "}
-            <span className="font-semibold text-[#f5c47f]">
-              shtrimin e pllakave qeramike, sanitari, instalime ujësjellësi dhe kanalizime & riparime.
-            </span>{" "}
-            Çdo punë kryhet me përkushtim për të ofruar dizajn modern dhe cilësi afatgjatë.
-          </p>
-
-          <p className="text-gray-800 leading-relaxed mb-8 text-base sm:text-lg font-light">
-            Puna jonë karakterizohet nga preciziteti, korrektësia dhe respekti ndaj çdo projekti. Ne garantojmë rezultate që rrisin vlerën dhe estetikën e çdo ambienti.
-          </p>
-
-          <div className="flex justify-center lg:justify-start">
-            <a
-              href="tel:+38349430005"
-              className="inline-flex items-center justify-center gap-3 bg-[#d4af7f] hover:bg-[#e6c58c] text-[#0f172a] font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <IoMdCall size={26} />
-              Thirr Tani
-            </a>
-          </div>
-        </div>
-
+      <div className="relative z-10 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         <div className="flex-1 flex justify-center">
-          <div className="relative rounded-3xl overflow-hidden w-[90%] sm:w-[80%] md:w-full max-w-md
-                          border-2 border-[#d4af7f]/50 shadow-2xl transform transition-all duration-500 
-                          hover:scale-105 hover:shadow-3xl bg-white animate-glow">
+          <div className="relative w-[90%] sm:w-[70%] md:w-[60%] max-w-md lg:max-w-lg bg-[white] rounded-3xl overflow-hidden shadow-2xl border-2 border-[#d4af7f]/60 p-4 flex items-center justify-center transition-all duration-700 hover:scale-105">
             <img
               src={Logo}
-              alt="Punime me pllaka qeramike"
-              className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] object-cover rounded-3xl"
+              alt="Logo Dini R Qeramikë"
+              className="w-full h-full object-contain"
+              loading="lazy"
             />
           </div>
         </div>
+
+        <div className="flex-1 text-center lg:text-left">
+          <h2 className="text-4xl sm:text-5xl font-extrabold mb-5 text-[#f5c47f]">
+            Kush Jemi Ne
+          </h2>
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            Me mbi{" "}
+            <span className="font-semibold text-[#f5c47f]">{years}+ vite</span>{" "}
+            përvojë, ne jemi një ekip profesionistësh që ofron zgjidhje moderne
+            dhe të qëndrueshme në{" "}
+            <span className="font-semibold text-[#f5c47f]">
+              shtrimin e pllakave qeramike, instalime sanitare dhe riparime
+              ujësjellësi.
+            </span>
+          </p>
+
+          <p className="text-gray-400 leading-relaxed mb-10">
+            Qëllimi ynë është të ndërtojmë besim me çdo klient duke ofruar punë
+            me cilësi të lartë, korrektësi dhe përkushtim maksimal në çdo
+            projekt. Çdo detaj ka rëndësi për ne.
+          </p>
+
+          <a
+            href="tel:+38349430005"
+            className="inline-flex items-center gap-3 bg-[#f5c47f] hover:bg-[#ffd899] text-[#0f172a] font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <IoMdCall size={26} />
+            Thirr Tani
+          </a>
+        </div>
       </div>
 
-      <style>
-        {`
-          @keyframes glow {
-            0%, 100% { box-shadow: 0 0 10px #f5c47f, 0 0 20px #f5c47f; }
-            50% { box-shadow: 0 0 25px #f5c47f, 0 0 35px #f5c47f; }
-          }
-          .animate-glow {
-            animation: glow 2s infinite alternate;
-          }
-        `}
-      </style>
+      <div className="relative z-10 mt-24 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {[
+          { value: years, label: "Vite Eksperiencë" },
+          { value: projects, label: "Projekte të Përfunduara" },
+          { value: clients, label: "Klientë të Kënaqur" },
+        ].map((stat, i) => (
+          <div
+            key={i}
+            className="group bg-linear-to-br from-[#1e293b] to-[#0f172a] rounded-2xl p-8 text-center border border-[#f5c47f]/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+          >
+            <h3 className="text-5xl font-bold text-[#f5c47f] mb-2 group-hover:scale-110 transition-transform duration-300">
+              {stat.value}+
+            </h3>
+            <p className="text-gray-300">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-[#f5c47f] via-[#ffd899] to-transparent"></div>
     </section>
   );
 };
