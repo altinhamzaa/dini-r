@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-center text-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Dini-R Qeramikë. Të gjitha të drejtat e rezervuara.
+            &copy; {new Date().getFullYear()} <span className="text-[#f5c47f]">Dini-R</span> Qeramikë. Të gjitha të drejtat e rezervuara.
           </p>
         </div>
       </div>
