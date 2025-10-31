@@ -99,6 +99,7 @@ const ContactForm: React.FC = () => {
             <Input
               placeholder="Shkruani emrin tuaj"
               className="border-gray-300 rounded-md py-2 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full"
+              required
             />
           </div>
 
@@ -110,6 +111,7 @@ const ContactForm: React.FC = () => {
               type="email"
               placeholder="Shkruani email-in tuaj"
               className="border-gray-300 rounded-md py-2 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full"
+              required
             />
           </div>
 
@@ -121,6 +123,7 @@ const ContactForm: React.FC = () => {
               rows={4}
               placeholder="Shkruani mesazhin tuaj"
               className="border-gray-300 rounded-md py-2 focus:ring-2 focus:ring-[#f5c47f] focus:border-[#f5c47f] w-full resize-none"
+              required
             />
           </div>
 
