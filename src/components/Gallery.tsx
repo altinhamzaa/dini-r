@@ -6,7 +6,6 @@ const categories = [
   "Shtrimi i Pllakave",
   "Instalime Ujësjellësi",
   "Punime Sanitare",
-  "Kanalizime & Riparime",
 ] as const;
 
 type Category = (typeof categories)[number];
@@ -15,7 +14,6 @@ const images: Record<Category, string[]> = {
   "Shtrimi i Pllakave": ["/images/pllaka/img1.jpg", "/images/pllaka/img2.jpg", "/images/pllaka/img3.jpg", "/images/pllaka/img4.jpg", "/images/pllaka/img5.jpg", "/images/pllaka/img6.jpg"],
   "Instalime Ujësjellësi": ["/images/ujesjelles/img1.jpg", "/images/ujesjelles/img2.jpg", "/images/ujesjelles/img3.jpg", "/images/ujesjelles/img4.jpg", "/images/ujesjelles/img5.jpg", "/images/ujesjelles/img6.jpg"],
   "Punime Sanitare": ["/images/sanitari/img1.jpg", "/images/sanitari/img2.jpg", "/images/sanitari/img3.jpg", "/images/sanitari/img4.jpg", "/images/sanitari/img5.jpg", "/images/sanitari/img6.jpg"],
-  "Kanalizime & Riparime": ["/images/kanalizim/img1.jpg", "/images/kanalizim/img2.jpg", "/images/kanalizim/img3.jpg", "/images/kanalizim/img4.jpg", "/images/kanalizim/img5.jpg", "/images/kanalizim/img6.jpg"],
 };
 
 const Gallery: React.FC = () => {

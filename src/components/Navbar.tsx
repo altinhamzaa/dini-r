@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
           to="/"
           className="text-2xl md:text-3xl font-extrabold text-[#d4af7f] tracking-tight"
         >
-          Dini-R <span className="text-gray-200">Qeramikë</span>
+          Bleoni<span className="text-gray-200"> Keramik</span>
         </NavLink>
 
         <ul className="hidden md:flex space-x-8 items-center">

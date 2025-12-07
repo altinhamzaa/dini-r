@@ -19,8 +19,8 @@ const Hero: React.FC = () => {
 
       <div className="relative z-10 px-6 sm:px-10 text-white max-w-3xl">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg opacity-0 animate-slideInLeft">
-          <span className="text-[#f5c47f]">Dini-R</span>{" "}
-          <span className="text-white font-semibold">Qeramikë</span>
+          <span className="text-[#f5c47f]">Bleoni</span>{" "}
+          <span className="text-white font-semibold">Keramik</span>
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-300 mb-10 leading-relaxed font-light opacity-0 animate-slideInRight">

@@ -36,17 +36,17 @@ const ContactForm: React.FC = () => {
                 href="tel:+38349430005"
                 className="hover:text-[#ffd899] transition duration-300"
               >
-                +383 49 430 005
+                +383 44 561 298
               </a>
             </div>
 
             <div className="flex items-center gap-3">
               <FaEnvelope className="text-[#f5c47f] text-lg" />
               <a
-                href="mailto:info@dini-r-qeramikë.com"
+                href="mailto:info@bleoni-keramik.com"
                 className="hover:text-[#ffd899] transition duration-300"
               >
-                info@dini-r-qeramikë.com
+                info@bleoni-keramik.com
               </a>
             </div>
 
@@ -59,15 +59,15 @@ const ContactForm: React.FC = () => {
           <div className="flex space-x-6 pt-6">
             {[
               {
-                href: "tel:+38349430005",
+                href: "tel:+383 44 561 298",
                 icon: <IoMdCall size={24} />,
               },
               {
-                href: "viber://chat?number=+38349430005",
+                href: "viber://chat?number=+38344561298",
                 icon: <SiViber size={24} />,
               },
               {
-                href: "https://wa.me/38349430005",
+                href: "https://wa.me/38344561298",
                 icon: <FaWhatsapp size={24} />,
               },
             ].map((link, index) => (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IoMdCall } from "react-icons/io";
-import Logo from "../assets/logo.jpg";
+import Logo from "../assets/bleoni-logo.png";
 import ScrollToTopWithButton from "./ScrollToTopWithButton";
 
 const About: React.FC = () => {
@@ -9,7 +9,7 @@ const About: React.FC = () => {
   const [clients, setClients] = useState(0);
 
   useEffect(() => {
-    const targets = { years: 7, projects: 315, clients: 400 };
+    const targets = { years: 3, projects: 98, clients: 282 };
     const duration = 2000;
     const start = performance.now();
 
@@ -67,7 +67,7 @@ const About: React.FC = () => {
           </p>
 
           <a
-            href="tel:+38349430005"
+            href="tel:+38344561298"
             className="inline-flex items-center gap-3 bg-[#f5c47f] hover:bg-[#ffd899] text-[#0f172a] font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
           >
             <IoMdCall size={26} />
