@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
               <a href="https://www.instagram.com/elmedinrexhaaa/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
                 <FaInstagram size={22} className="text-white" />
               </a>
-              <a href="https://www.facebook.com/elmedinirexha" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+              <a href="https://www.instagram.com/bleonzllanoga/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
                 <FaFacebook size={22} className="text-white" />
               </a>
-              <a href="https://www.tiktok.com/@diniqeramik" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+              <a href="https://www.tiktok.com/@bleonzllanoga" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-[#f5c47f] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
                 <FaTiktok size={22} className="text-white" />
               </a>
             </div>

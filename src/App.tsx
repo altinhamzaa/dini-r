@@ -7,12 +7,14 @@ import Hero from "./components/Hero";
 import ScrollToTop from "./components/ScrollToTop";
 import Gallery from "./components/Gallery";
 import ContactForm from "./components/ContactForm";
+import WhatsAppContactModal from "./components/WhatsupContentModel";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <ScrollToTop />
+      <WhatsAppContactModal />
       <div className="App">
         <Routes>
           <Route path="/" element={<Hero />}/>

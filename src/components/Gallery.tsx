@@ -4,16 +4,14 @@ import ScrollToTopWithButton from "./ScrollToTopWithButton";
 
 const categories = [
   "Shtrimi i Pllakave",
-  "Instalime Ujësjellësi",
   "Punime Sanitare",
 ] as const;
 
 type Category = (typeof categories)[number];
 
 const images: Record<Category, string[]> = {
-  "Shtrimi i Pllakave": ["/images/pllaka/img1.jpg", "/images/pllaka/img2.jpg", "/images/pllaka/img3.jpg", "/images/pllaka/img4.jpg", "/images/pllaka/img5.jpg", "/images/pllaka/img6.jpg"],
-  "Instalime Ujësjellësi": ["/images/ujesjelles/img1.jpg", "/images/ujesjelles/img2.jpg", "/images/ujesjelles/img3.jpg", "/images/ujesjelles/img4.jpg", "/images/ujesjelles/img5.jpg", "/images/ujesjelles/img6.jpg"],
-  "Punime Sanitare": ["/images/sanitari/img1.jpg", "/images/sanitari/img2.jpg", "/images/sanitari/img3.jpg", "/images/sanitari/img4.jpg", "/images/sanitari/img5.jpg", "/images/sanitari/img6.jpg"],
+  "Shtrimi i Pllakave": ["/images/pllaka/bleoni1.jpg", "/images/pllaka/bleoni2.jpg", "/images/pllaka/bleoni3.jpg", "/images/pllaka/bleoni4.jpg", "/images/pllaka/bleoni5.jpg", "/images/pllaka/bleoni6.jpg"],
+  "Punime Sanitare": ["/images/sanitari/bleoni1.jpg", "/images/sanitari/bleoni2.jpg", "/images/sanitari/bleoni3.jpg", "/images/sanitari/bleoni4.jpg", "/images/sanitari/bleoni5.jpg", "/images/sanitari/bleoni6.jpg"],
 };
 
 const Gallery: React.FC = () => {
