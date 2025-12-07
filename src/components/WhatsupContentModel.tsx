@@ -20,15 +20,22 @@ const WhatsAppContactModal: React.FC = () => {
 
   return (
     <>
+      {/* WhatsApp Floating Button - Transparent */}
       <button
         onClick={() => document.getElementById('whatsapp-modal')?.classList.remove('hidden')}
-        className="fixed bottom-6 left-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-300"
+        className="fixed bottom-6 left-6 z-50 bg-transparent border-2 border-[#25D366] text-[#25D366] w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 hover:bg-[#25D366] hover:text-white group"
         aria-label="Open WhatsApp"
       >
         <FaWhatsapp className="w-7 h-7" />
+        
+        {/* Tooltip */}
+        <span className="absolute -top-12 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm font-medium px-3 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg">
+          Na kontaktoni në WhatsApp
+          <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
+        </span>
       </button>
 
-      <div id="whatsapp-modal" className="fixed inset-0 z-100 hidden">
+      <div id="whatsapp-modal" className="fixed inset-0 z-[100] hidden">
         <div 
           className="fixed inset-0 bg-black/50"
           onClick={() => document.getElementById('whatsapp-modal')?.classList.add('hidden')}
@@ -50,7 +57,7 @@ const WhatsAppContactModal: React.FC = () => {
 
             <div className="p-6">
               <div className="flex flex-col items-center mb-6">
-                <div className="w-35 h-35 rounded-full bg-gray-100 mb-3 flex items-center justify-center overflow-hidden border-2 border-[#25D366]/20">
+                <div className="w-32 h-32 rounded-full bg-gray-100 mb-4 flex items-center justify-center overflow-hidden border-4 border-[#25D366]/10">
                   <img 
                     src={Logo} 
                     alt="Bleoni Keramik Logo" 
@@ -59,6 +66,7 @@ const WhatsAppContactModal: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <h4 className="text-xl font-bold text-gray-800">Bleon Zllanoga</h4>
+                  <p className="text-gray-600 text-sm mt-1">Pronar - Bleoni Keramik</p>
                 </div>
               </div>
 
